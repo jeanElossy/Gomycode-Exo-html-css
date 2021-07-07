@@ -1,0 +1,255 @@
+:root{
+  --color1: #eff1f13b;
+  --color2: #0b4da3;
+  --color3: green;
+  --color4: #4b4c4d;
+  --color5: #515152;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+/*---------------------------------------------------le conteneur-------------------------------------------------------*/
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  height: 600px;
+  background: var(--color1);
+}
+
+/*---------------------------------------------------le titre principal-------------------------------------------------------*/
+.title{
+  border: #14da60;
+  background: var(--color2);
+  width: 20%;
+  padding: 0.3rem;
+  margin-left: 15px;
+  margin-top: 15px;
+  border-radius: 3px;
+}
+
+.title h1{
+  text-align: center;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*---------------------------------------------------le deuxieme titre avec le logo de cloche -------------------------------------------------------*/
+#fa-bell{
+  background: var(--color2);
+  box-shadow: 0px 0px 4px var(--color4);
+}
+
+.fa-bell{
+  color: white;
+  transform: rotate(30deg);
+  padding: 10px;
+}
+
+.content--title{
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content--title h3{
+  margin-left: 15px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+  color: var(--color5);
+}
+
+/*---------------------------------------------------le conteneur des 4 personnes-------------------------------------------------------*/
+.contents{
+  display: flex;
+  justify-content: space-around;
+}
+.content{
+  position: relative;
+  width: 21%;
+  height: 350px;
+  border-radius: 6px;
+  background: white;
+  box-shadow: 0px 0px 8px rgba(61, 44, 44, 0.12);
+}
+.blue--line{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+   width: 120px;
+   height: 4px;
+   background: var(--color2);
+   border-radius: 4px;
+ }
+
+ .content--icon{
+   margin: 25px;
+ }
+ .fa-check-circle{
+   color: var(--color3);
+ }
+.fa-heart{
+  float: right;
+}
+
+.content--picture--one{
+  background: url(../MEDIA/Le_Will.jpg) center/cover;
+  width: 100px;
+  height: 100px;
+  object-fit: fill;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+.content--picture--two{
+  background: url(../MEDIA/1.jpg) center/cover;
+  width: 100px;
+  height: 100px;
+  object-fit: fill;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+.content--picture--three{
+  background: url(../MEDIA/2.jpg) center/cover;
+  width: 100px;
+  height: 100px;
+  object-fit: fill;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+.content--picture--four{
+  background: url(../MEDIA/3.jpg) center/cover;
+  width: 100px;
+  height: 100px;
+  object-fit: fill;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+.content--text{
+  width: 100%;
+  position: absolute;
+  top: 66%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  text-align: center;
+  font-family: 'Patrick Hand', cursive;
+}
+.content--text h3{
+  color: var(--color5);
+}
+.content--text p{
+  color: var(--color5);
+}
+.content--footer--icons--text{
+  margin-top: 95%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.icon--text--one{
+  display: flex;
+}
+.icon--text--two{
+  display: flex;
+}
+.icon--text--one h5{
+  font-family: 'Patrick Hand', cursive;
+  margin-left: 5px;
+  color: var(--color5);
+}
+.icon--text--two h5{
+  font-family: 'Patrick Hand', cursive;
+  margin-left: 5px;
+  color: var(--color5);
+}
+
+.active{
+  background: var(--color2);
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  margin-top: -8px;
+  box-shadow: 1px 0px 6px var(--color4);
+  cursor: pointer;
+  
+}
+.active .text--view{
+  color: white;
+}
+.active .fa-eye{
+  color: white;
+}
+
+.fa-address-book{
+  font-size: 0.8em;
+}
+.fa-eye{
+  font-size: 0.75em;
+}
+
+/*-----------------------------------le reponsive Design------------------------------------*/
+@media screen and (max-width: 520px){
+  .contents{
+      display: block;
+    }
+
+    .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 100vh;
+    background: #fafaff00;
+  }
+  .content{
+    position: relative;
+    width: 60%;
+    margin: 0px auto;;
+    border-radius: 6px;
+    background: white;
+    box-shadow: 0px 0px 8px rgba(61, 44, 44, 0.12);
+    margin-bottom: 30px;
+  }
+  .content--footer--icons--text{
+    margin-top: 105%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .content--text{
+    margin-top: -20px;
+  }
+  .content--picture--one{
+    margin-top: 13px;
+  }
+   .content--picture--two{
+    margin-top: 13px;
+  }
+   .content--picture--three{
+    margin-top: 13px;
+  }
+   .content--picture--four{
+    margin-top: 13px;
+  }
+  
+}
